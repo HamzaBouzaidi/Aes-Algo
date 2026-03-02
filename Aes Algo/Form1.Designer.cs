@@ -36,6 +36,8 @@
             this.Keytextbox = new System.Windows.Forms.TextBox();
             this.Encryption = new System.Windows.Forms.Button();
             this.Decryption = new System.Windows.Forms.Button();
+            this.Mode = new System.Windows.Forms.ComboBox();
+            this.Modelabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Plaintext
@@ -95,18 +97,42 @@
             // 
             // Decryption
             // 
-            this.Decryption.Location = new System.Drawing.Point(497, 385);
+            this.Decryption.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Decryption.Location = new System.Drawing.Point(432, 375);
             this.Decryption.Name = "Decryption";
-            this.Decryption.Size = new System.Drawing.Size(75, 23);
+            this.Decryption.Size = new System.Drawing.Size(157, 39);
             this.Decryption.TabIndex = 6;
-            this.Decryption.Text = "button1";
+            this.Decryption.Text = "Decryption";
             this.Decryption.UseVisualStyleBackColor = true;
+            // 
+            // Mode
+            // 
+            this.Mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mode.FormattingEnabled = true;
+            this.Mode.Location = new System.Drawing.Point(302, 213);
+            this.Mode.Name = "Mode";
+            this.Mode.Size = new System.Drawing.Size(121, 33);
+            this.Mode.TabIndex = 7;
+            this.Mode.Text = "ECD";
+            // 
+            // Modelabel
+            // 
+            this.Modelabel.AutoSize = true;
+            this.Modelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Modelabel.Location = new System.Drawing.Point(69, 213);
+            this.Modelabel.Name = "Modelabel";
+            this.Modelabel.Size = new System.Drawing.Size(77, 25);
+            this.Modelabel.TabIndex = 8;
+            this.Modelabel.Text = "Mode:";
+            this.Modelabel.Click += new System.EventHandler(this.Modelabel_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 458);
+            this.Controls.Add(this.Modelabel);
+            this.Controls.Add(this.Mode);
             this.Controls.Add(this.Decryption);
             this.Controls.Add(this.Encryption);
             this.Controls.Add(this.Keytextbox);
@@ -129,6 +155,8 @@
         private System.Windows.Forms.TextBox Keytextbox;
         private System.Windows.Forms.Button Encryption;
         private System.Windows.Forms.Button Decryption;
+        private System.Windows.Forms.ComboBox Mode;
+        private System.Windows.Forms.Label Modelabel;
     }
 }
 

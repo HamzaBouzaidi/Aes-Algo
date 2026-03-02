@@ -21,5 +21,10 @@ namespace Aes_Algo
         {
 
         }
+
+        private void Modelabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
