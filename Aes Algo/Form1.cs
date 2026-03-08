@@ -25,7 +25,8 @@ namespace Aes_Algo
             
             Encryption.Click += Encryption_Click;
             Decryption.Click += Decryption_Click;
-
+            SaveBtn.Click += SaveBtn_Click;
+            LoadBtn.Click += LoadBtn_Click;
         }
 
         private void KeyText_Click(object sender, EventArgs e)
