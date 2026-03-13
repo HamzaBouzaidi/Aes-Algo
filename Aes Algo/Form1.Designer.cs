@@ -44,6 +44,7 @@
             this.OutputBox = new System.Windows.Forms.TextBox();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.LoadBtn = new System.Windows.Forms.Button();
+            this.CipherText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Plaintext
@@ -204,11 +205,22 @@
             this.LoadBtn.Text = "Load.txt";
             this.LoadBtn.UseVisualStyleBackColor = false;
             // 
+            // CipherText
+            // 
+            this.CipherText.AutoSize = true;
+            this.CipherText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CipherText.Location = new System.Drawing.Point(69, 229);
+            this.CipherText.Name = "CipherText";
+            this.CipherText.Size = new System.Drawing.Size(141, 25);
+            this.CipherText.TabIndex = 15;
+            this.CipherText.Text = "Cipher text :";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 659);
+            this.Controls.Add(this.CipherText);
             this.Controls.Add(this.LoadBtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.OutputBox);
@@ -247,6 +259,7 @@
         private System.Windows.Forms.TextBox OutputBox;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button LoadBtn;
+        private System.Windows.Forms.Label CipherText;
     }
 }
 

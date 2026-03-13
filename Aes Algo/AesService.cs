@@ -8,8 +8,8 @@ namespace Aes_Algo
     internal class AesService
     {
         private const int SaltSizeBytes = 16; // this will be used later for me to generate 16 bytes 
-        private const int IvSizeBytes = 16;
-        private const int Pbkdf2Iterations = 100_000;
+        private const int IvSizeBytes = 16;// AES block size is 16 bytes (128 bits)
+        private const int Pbkdf2Iterations = 100_000; // iteration count for better security
 
         public EncryptionPackage Encrypt(string plaintext, string password, CipherMode mode, int keySizeBits)
         {
@@ -33,7 +33,7 @@ namespace Aes_Algo
                 aes.Key = key;
                 aes.Mode = mode;
                 aes.Padding = PaddingMode.PKCS7;
-
+                 
                 if (mode != CipherMode.ECB)
                     aes.IV = iv;
 
